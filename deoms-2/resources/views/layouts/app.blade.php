@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
         <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
 
-        <link href="{{ asset('css/jquery.mb.YTPlayer.min.csss') }}" media="all" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/jquery.mb.YTPlayer.min.css') }}" media="all" rel="stylesheet" type="text/css">
 
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
@@ -54,7 +54,29 @@
                     <a href="#" class="small mr-3" style="color:#ffffff !important;"><span class="icon-envelope-o mr-2"></span> deoms@gmail.com</a> 
                 </div>
                 <div class="col-lg-3 text-right">
-                    <a href="login.html" class="small mr-3" style="color: #ffffff;"><span class="icon-unlock-alt"></span> Log In</a>
+                       @guest
+                            @if (Route::has('login'))
+                                <a href="{{ route('login') }}" class="small mr-3" style="color: #ffffff;"><span class="icon-lock2"></span> Log In</a>
+                            @endif
+
+                            <!-- @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif -->
+                        @else   
+                                <a href="#" class="small mr-3" style="color: #ffffff;"><span class="icon-dashboard"></span> Dashboard</a>
+                                |&nbsp;<a  class="small mr-3" style="color: #ffffff;" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    <span class="icon-unlock-alt"></span>
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                        @endguest
                     <!-- <a href="register.html" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a> -->
                 </div>
                 </div>
@@ -92,7 +114,6 @@
                         </li>
                     </ul>                                                                                                                                                                                                                                                                                          </ul>
                     </nav>
-
                 </div>
                 <div class="ml-auto">
                     <div class="social-wrap">
@@ -109,10 +130,68 @@
             </div>
 
         </header>
+
+        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') || Request::is('login') )
+        <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url(' {{ asset('images/deoms_logo.jpg') }}' )">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-lg-7">
+                    <h2 class="mb-0">@yield('page-title')</h2>
+                    <p>@yield('page_desc')</p>
+                </div>
+            </div>
+            </div>
+        </div> 
+        <div class="custom-breadcrumns border-bottom">
+            <div class="container">
+                <a href="{{ url('/') }}">Home</a>
+                <span class="mx-3 icon-keyboard_arrow_right"></span>
+                <span class="current">@yield('page-title')</span>
+            </div>
+        </div>
+        @endif
+
         <div  id="app">
             @yield('pageBreadcrumb')
             @yield('content')
         </div>
+
+        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') || Request::is('login') )
+        <div class="section-bg style-1" style="background-image: url('images/deoms_teachers.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                        <span class="icon flaticon-mortarboard"></span>
+                        <h3>Our Philosphy</h3>
+                        <p>
+                        The Don Emilio Osmena School, Inc. in its collaborative efforts adopt the K-12 Curriculum using the 
+                        MELC(Most Essential Learning Competence) aligned with the basic modality, the Modular Strategic Method
+                        of Teaching. Despite the pandemic, Education goes on with the most important protocols and guideline to follow.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                        <span class="icon flaticon-school-material"></span>
+                        <h3>School Goal</h3>
+                        <ol class="ul-check primary list-unstyled">
+                            <li><p>Attain the highest degree of excellence despite the pandemic<p></li>
+                            <li><p>Assist and assess student's capabilities and academic performace through weekly evaluation and 
+quarterly evaluation.</p></li>
+                            <li><p>Extend remedial instructions to those who failed to achieve a 75% of proficiency level.</p></li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                        <span class="icon flaticon-library"></span>
+                        <h3>School Objectives</h3>
+                        <ol class="ul-check primary list-unstyled">
+                            <li><p>Produce learners who are capable of accepting sudden educational changes.</p></li>
+                            <li><p>Achieve the highest degree of excellence by producing graduates who are worthy to face present
+and future global competence.</p></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
 
         <div class="footer">
             <div class="container">
@@ -128,6 +207,7 @@
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ route('our-school')}}">Our School</a></li>
                         <li><a href="{{ route('programs') }}">Programs</a></li>
+                        <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">

@@ -109,7 +109,7 @@
             </div>
 
         </header>
-        <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url(' {{ asset('images/bg_1.jpg') }}' )">
+        <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url(' {{ asset('images/deoms_logo.jpg') }}' )">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-lg-7">
@@ -180,6 +180,7 @@ and future global competence.</p></li>
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ route('our-school')}}">Our School</a></li>
                         <li><a href="{{ route('programs') }}">Programs</a></li>
+                        <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">

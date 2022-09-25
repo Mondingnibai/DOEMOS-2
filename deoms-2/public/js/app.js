@@ -81,7 +81,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -129,19 +128,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../js/components/public/Home.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 
+ // import Home from '../js/components/public/Home.vue'
 
-
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
-var routes = [{
-  path: '/',
-  name: 'home',
-  component: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../js/components/public/Home.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
-}];
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var routes = [// {
+  //     path: '/',
+  //     name: 'home',
+  //     component: Home
+  // }
+];
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   routes: routes
 });
@@ -537,10 +536,6 @@ var staticRenderFns = [
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda omnis tempora ullam alias amet eveniet voluptas, incidunt quasi aut officiis porro ad, expedita saepe necessitatibus rem debitis architecto dolore? Nam omnis sapiente placeat blanditiis voluptas dignissimos, itaque fugit a laudantium adipisci dolorem enim ipsum cum molestias? Quod quae molestias modi fugiat quisquam. Eligendi recusandae officiis debitis quas beatae aliquam?"
                   ),
                 ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Read more")]),
-                ]),
               ]),
             ]),
           ]),
@@ -570,9 +565,213 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("contact us form here")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "contact-us-view" }, [
+      _c("div", { staticClass: "site-section" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6 form-group" }, [
+                    _c("label", { attrs: { for: "fname" } }, [
+                      _vm._v("First Name"),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control form-control-lg",
+                      attrs: { type: "text", id: "fname" },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6 form-group" }, [
+                    _c("label", { attrs: { for: "lname" } }, [
+                      _vm._v("Last Name"),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control form-control-lg",
+                      attrs: { type: "text", id: "lname" },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6 form-group" }, [
+                    _c("label", { attrs: { for: "eaddress" } }, [
+                      _vm._v("Email Address"),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control form-control-lg",
+                      attrs: { type: "text", id: "eaddress" },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6 form-group" }, [
+                    _c("label", { attrs: { for: "tel" } }, [
+                      _vm._v("Tel. Number"),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control form-control-lg",
+                      attrs: { type: "text", id: "tel" },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12 form-group" }, [
+                    _c("label", { attrs: { for: "message" } }, [
+                      _vm._v("Message"),
+                    ]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "",
+                        id: "message",
+                        cols: "30",
+                        rows: "10",
+                      },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-12" }, [
+                    _c("input", {
+                      staticClass: "btn btn-primary btn-lg px-5",
+                      attrs: { type: "submit", value: "Send Message" },
+                    }),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-10 offset-md-1" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "feature-1 border" }, [
+                      _c("div", { staticClass: "col-sm-12" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-sm-6" }, [
+                            _c(
+                              "div",
+                              { staticClass: "feature-1-content text-left" },
+                              [
+                                _c("h2", [_vm._v("Principal Office")]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-envelope mr-2",
+                                  }),
+                                  _vm._v(" deoms@gmail.com"),
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-phone2 mr-2",
+                                  }),
+                                  _vm._v(" 10 20 123 456"),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-sm-6" }, [
+                            _c(
+                              "div",
+                              { staticClass: "feature-1-content text-left" },
+                              [
+                                _c("h2", [_vm._v("Accounting Office")]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-envelope mr-2",
+                                  }),
+                                  _vm._v(" deoms@gmail.com"),
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-phone2 mr-2",
+                                  }),
+                                  _vm._v(" 10 20 123 456"),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-sm-6" }, [
+                            _c(
+                              "div",
+                              { staticClass: "feature-1-content text-left" },
+                              [
+                                _c("h2", [_vm._v("Principal Office")]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-envelope mr-2",
+                                  }),
+                                  _vm._v(" deoms@gmail.com"),
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-phone2 mr-2",
+                                  }),
+                                  _vm._v(" 10 20 123 456"),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-sm-6" }, [
+                            _c(
+                              "div",
+                              { staticClass: "feature-1-content text-left" },
+                              [
+                                _c("h2", [_vm._v("Principal Office")]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-envelope mr-2",
+                                  }),
+                                  _vm._v(" deoms@gmail.com"),
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _c("span", {
+                                    staticClass: "icon-phone2 mr-2",
+                                  }),
+                                  _vm._v(" 10 20 123 456"),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
