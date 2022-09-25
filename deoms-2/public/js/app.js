@@ -436,7 +436,7 @@ var staticRenderFns = [
           {
             staticClass: "intro-section",
             staticStyle: {
-              "background-image": "url('images/deoms_teachers.jpg')",
+              "background-image": "url('images/deoms_teachers2.jpg')",
             },
           },
           [
