@@ -22,16 +22,14 @@ use App\Http\Controllers\Admin\ResouceController;
 |
 */
 
-// Route::get('/{any}', [MainController::class, 'index'])->where('any', '.*');
-
 // Public pages
 Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/programs', [ProgramController::class, 'index'])->name('programs');
 Route::get('/our-school', [OurSchoolController::class, 'index'])->name('our-school');
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us');
 
+// Login Routes
 Auth::routes();
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Admin Routes
 Route::prefix('admin')->middleware(['auth', 'nocache'])->group(function () {
@@ -46,7 +44,7 @@ Route::prefix('admin')->middleware(['auth', 'nocache'])->group(function () {
     Route::delete('delete-announcement/{id}', [AnnouncementController::class, 'destroy']);
     Route::get('show-announcement/{id}', [AnnouncementController::class, 'showAnnouncementById']);
 
-    // // Forms
+    // Resource
     Route::get('forms', [ResouceController::class, 'index'])->name('forms');
     Route::get('newForm', [ResouceController::class, 'newForm'])->name('newForm');
 });

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('page-title', 'DEOMS::Forms')
+@section('page-title', 'DEOMS | Forms')
 @section('pageTitle', '')
 
 @section('content')

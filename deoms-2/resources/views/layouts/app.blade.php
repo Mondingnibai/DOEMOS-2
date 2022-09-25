@@ -65,9 +65,8 @@
                                 </li>
                             @endif -->
                         @else   
-                                <a href="#" class="small mr-3" style="color: #ffffff;"><span class="icon-dashboard"></span> Dashboard</a>
-                                |&nbsp;<a  class="small mr-3" style="color: #ffffff;" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
+                                <a href="{{ route('dashboard') }}" class="small mr-3" style="color: #ffffff;"><span class="icon-dashboard"></span> Dashboard</a>
+                                |&nbsp;<a  class="small mr-3" style="color: #ffffff;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
                                     <span class="icon-unlock-alt"></span>
                                     Logout
