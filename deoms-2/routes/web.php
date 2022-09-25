@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Use App\Http\Controllers\SpaController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\OurSchoolController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +16,9 @@ Use App\Http\Controllers\SpaController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Route::get('/{any}', [MainController::class, 'index'])->where('any', '.*');
 
-Route::get('/{any}', [SpaController::class, 'index'])->where('any', '.*');
+// Public pages
+Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/programs', [ProgramController::class, 'index'])->name('programs');
+Route::get('/our-school', [OurSchoolController::class, 'index'])->name('our-school');
