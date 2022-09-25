@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
         <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
 
-        <link href="{{ asset('css/jquery.mb.YTPlayer.min.csss') }}" media="all" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/jquery.mb.YTPlayer.min.css') }}" media="all" rel="stylesheet" type="text/css">
 
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
@@ -54,7 +54,29 @@
                     <a href="#" class="small mr-3" style="color:#ffffff !important;"><span class="icon-envelope-o mr-2"></span> deoms@gmail.com</a> 
                 </div>
                 <div class="col-lg-3 text-right">
-                    <a href="login.html" class="small mr-3" style="color: #ffffff;"><span class="icon-unlock-alt"></span> Log In</a>
+                       @guest
+                            @if (Route::has('login'))
+                                <a href="{{ route('login') }}" class="small mr-3" style="color: #ffffff;"><span class="icon-lock2"></span> Log In</a>
+                            @endif
+
+                            <!-- @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif -->
+                        @else   
+                                <a href="#" class="small mr-3" style="color: #ffffff;"><span class="icon-dashboard"></span> Dashboard</a>
+                                |&nbsp;<a  class="small mr-3" style="color: #ffffff;" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    <span class="icon-unlock-alt"></span>
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                        @endguest
                     <!-- <a href="register.html" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a> -->
                 </div>
                 </div>
@@ -92,7 +114,6 @@
                         </li>
                     </ul>                                                                                                                                                                                                                                                                                          </ul>
                     </nav>
-
                 </div>
                 <div class="ml-auto">
                     <div class="social-wrap">
@@ -110,7 +131,7 @@
 
         </header>
 
-        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') )
+        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') || Request::is('login') )
         <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url(' {{ asset('images/deoms_logo.jpg') }}' )">
             <div class="container">
                 <div class="row align-items-end">
@@ -135,7 +156,7 @@
             @yield('content')
         </div>
 
-        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') )
+        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') || Request::is('login') )
         <div class="section-bg style-1" style="background-image: url('images/deoms_teachers.jpg');">
             <div class="container">
                 <div class="row">
