@@ -22,7 +22,6 @@ use App\Http\Controllers\Admin\ResouceController;
 |
 */
 
-// Route::get('/{any}', [MainController::class, 'index'])->where('any', '.*');
 
 // Public pages
 Route::get('/', [MainController::class, 'index'])->name('home');
@@ -30,8 +29,8 @@ Route::get('/programs', [ProgramController::class, 'index'])->name('programs');
 Route::get('/our-school', [OurSchoolController::class, 'index'])->name('our-school');
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us');
 
+// Login Routes
 Auth::routes();
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Admin Routes
 Route::prefix('admin')->middleware(['auth', 'nocache'])->group(function () {
@@ -40,13 +39,15 @@ Route::prefix('admin')->middleware(['auth', 'nocache'])->group(function () {
 
     // Announcement
     Route::get('announcement', [AnnouncementController::class, 'index'])->name('announcement');
-    Route::get('new-announcement', [AnnouncementController::class, 'newAnnouncement'])->name('new-announcement');
+    Route::get('add-announcement', [AnnouncementController::class, 'newAnnouncement'])->name('add-announcement');
+    Route::get('edit-announcement/{id}', [AnnouncementController::class, 'editAnnouncement'])->name('edit-announcement');
     Route::post('create-announcement', [AnnouncementController::class, 'store'])->name('create-announcement');
+    Route::post('update-announcement/{id}', [AnnouncementController::class, 'updateAnnouncement'])->name('update-announcement');
     Route::get('get-all-announcement', [AnnouncementController::class, 'showAllAnnouncement'])->name('get-all-announcement');
     Route::delete('delete-announcement/{id}', [AnnouncementController::class, 'destroy']);
     Route::get('show-announcement/{id}', [AnnouncementController::class, 'showAnnouncementById']);
 
-    // // Forms
+    // Resource
     Route::get('forms', [ResouceController::class, 'index'])->name('forms');
     Route::get('newForm', [ResouceController::class, 'newForm'])->name('newForm');
 });

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Announcement;
+
 class AnnouncementController extends Controller
 {
      /**
@@ -34,7 +36,17 @@ class AnnouncementController extends Controller
      */
     public function newAnnouncement()
     {
-        return view('admin.announcement.newAnnouncement');
+        return view('admin.announcement.add-announcement');
+    }
+
+     /**
+     * Show the application new announcement.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function editAnnouncement()
+    {
+        return view('admin.announcement.edit-announcement');
     }
 
     /**
@@ -50,9 +62,9 @@ class AnnouncementController extends Controller
             // validate announcement form data
             $validate = $request->validate([
                 'title' => 'required',
-                'venue' => 'required',
-                'date' => 'required',
-                'time' => 'required',
+                // 'venue' => 'required',
+                // 'date' => 'required',
+                // 'time' => 'required',
                 'description' => 'required'
             ]);
 
@@ -60,11 +72,11 @@ class AnnouncementController extends Controller
             if($validate) {
                 $announcement = Announcement::create($request->post());
                 return response()->json([
-                    'message' => 'New Announcement successfully created',
-                    'annoucement' => $announcement
+                    'message' => 'New Announcement successfully added!',
+                    'annoucement' => $announcement  
                 ]);
             }
-
+            
         } catch(\Exception $e) {
             return $e->getMessage();
         }
@@ -79,6 +91,7 @@ class AnnouncementController extends Controller
     public function showAllAnnouncement() 
     {
         try {
+
             $announcement = Announcement::all();
             return response()->json($announcement);
 
@@ -130,6 +143,44 @@ class AnnouncementController extends Controller
                 return response()->json([
                     'announcement' => $announcement,
                     'message' => 'Announcement',
+                ]);
+            }
+
+        } catch(\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+     /**
+     * update announcement 
+     *
+     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function updateAnnouncement(Request $request, $id) {
+        try {
+            
+            // Find announcement by id
+            $announcement = Announcement::find($id);
+
+            // If exists
+            if($announcement) {
+
+                // Validate
+                $this->validate($request, [
+                    'title' => 'required',
+                    'description' => 'required',
+                ]);
+
+                // Save Announcement
+                $announcement->title = $request->input('title');
+                $announcement->description = $request->input('description');
+                $announcement->save();
+
+                return response()->json([
+                    'message' => 'Announcement updated successfully!',
+                    'annoucement' => $announcement  
                 ]);
             }
 

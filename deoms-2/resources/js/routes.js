@@ -2,14 +2,15 @@ import Vue from 'vue'
 import  {createRouter, createWebHistory}  from 'vue-router'
 import Hello from './components/Hello.vue';
 import Home from './components/Home.vue';
+import Newannouncement from '../js/components/admin/NewAnnouncement.vue'
 
 Vue.use(createRouter);
 
 const routes =  [
         {
-            path: '/',
-            name: 'home',
-            component: Home
+            path: '/add-announcement',
+            name: 'add-announcement',
+            component: Newannouncement
         }
 ];
 
