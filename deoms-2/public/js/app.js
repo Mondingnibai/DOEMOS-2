@@ -81,7 +81,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -536,10 +535,6 @@ var staticRenderFns = [
                   _vm._v(
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda omnis tempora ullam alias amet eveniet voluptas, incidunt quasi aut officiis porro ad, expedita saepe necessitatibus rem debitis architecto dolore? Nam omnis sapiente placeat blanditiis voluptas dignissimos, itaque fugit a laudantium adipisci dolorem enim ipsum cum molestias? Quod quae molestias modi fugiat quisquam. Eligendi recusandae officiis debitis quas beatae aliquam?"
                   ),
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Read more")]),
                 ]),
               ]),
             ]),

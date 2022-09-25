@@ -180,6 +180,7 @@ and future global competence.</p></li>
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ route('our-school')}}">Our School</a></li>
                         <li><a href="{{ route('programs') }}">Programs</a></li>
+                        <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
