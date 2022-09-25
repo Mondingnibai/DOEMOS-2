@@ -87,8 +87,8 @@
                         <li class="{{ Request::path() == 'programs' ? 'active' : '' }}">
                             <a href="{{ route('programs') }}" class="nav-link text-left">Programs</a>
                         </li>
-                        <li>
-                            <a href="contact.html" class="nav-link text-left">Contact</a>
+                        <li class="{{ Request::path() == 'contact-us' ? 'active' : '' }}">
+                            <a href="{{ route('contact-us') }}" class="nav-link text-left">Contact</a>
                         </li>
                     </ul>                                                                                                                                                                                                                                                                                          </ul>
                     </nav>
