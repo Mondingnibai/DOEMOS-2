@@ -1,3 +1,90 @@
 <template>
-    <p>contact us form here</p>
+    <div class="contact-us-view">
+        <div class="site-section">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="fname" class="form-control form-control-lg">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" id="lname" class="form-control form-control-lg">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="eaddress">Email Address</label>
+                                    <input type="text" id="eaddress" class="form-control form-control-lg">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="tel">Tel. Number</label>
+                                    <input type="text" id="tel" class="form-control form-control-lg">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                                </div>
+                            </div>
+                
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="submit" value="Send Message" class="btn btn-primary btn-lg px-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="row">
+                                    <div class="feature-1 border">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="feature-1-content text-left">
+                                                        <h2>Principal Office</h2>
+                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
+                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="feature-1-content text-left">
+                                                        <h2>Accounting Office</h2>
+                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
+                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="feature-1-content text-left">
+                                                        <h2>Principal Office</h2>
+                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
+                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="feature-1-content text-left">
+                                                        <h2>Principal Office</h2>
+                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
+                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
 </template>
