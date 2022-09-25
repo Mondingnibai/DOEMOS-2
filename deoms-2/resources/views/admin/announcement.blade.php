@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
 @section('page-title', 'DEOMS | Announcement')
-@section('pageTitle', 'Announcement')
+@section('pageTitle', 'List of All Announcement')
 
 @section('content')
-    <all-announcement></all-announcement>
+<announcement></announcement>
 @endsection

@@ -16,9 +16,9 @@ class Announcements extends Migration
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('venue');
-            $table->date('date');
-            $table->time('time');
+            // $table->string('venue');
+            // $table->date('date');
+            // $table->time('time');
             $table->string('description');
             $table->timestamps();
         });

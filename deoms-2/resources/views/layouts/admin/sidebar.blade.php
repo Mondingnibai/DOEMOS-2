@@ -19,11 +19,28 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{ route('announcement') }}" class="nav-link {{ Request::routeIs('announcement') || Request::routeIs('new-announcement') ? 'active' : '' }}">
+          <li class="nav-item {{ Request::routeIs('announcement') || Request::routeIs('add-announcement') || Request::routeIs('edit-announcement') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{ Request::routeIs('announcement') || Request::routeIs('add-announcement') || Request::routeIs('edit-announcement') ? 'active' : '' }}">
               <i class="nav-icon fas fa-bullhorn"></i>
-              <p>Announcement</p>
+              <p>
+                Announcement
+                <i class="fas fa-angle-left right"></i>
+              </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('announcement') }}" class="nav-link {{ Request::routeIs('announcement') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Announcements</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href="{{ route('add-announcement') }}" class="nav-link {{ Request::routeIs('add-announcement') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Announcement</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="{{ route('forms') }}" class="nav-link {{ Request::routeIs('forms')  || Request::routeIs('newForm') ? 'active' : '' }}">

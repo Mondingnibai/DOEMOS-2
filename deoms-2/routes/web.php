@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\ResouceController;
 |
 */
 
+
 // Public pages
 Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/programs', [ProgramController::class, 'index'])->name('programs');
@@ -38,8 +39,10 @@ Route::prefix('admin')->middleware(['auth', 'nocache'])->group(function () {
 
     // Announcement
     Route::get('announcement', [AnnouncementController::class, 'index'])->name('announcement');
-    Route::get('new-announcement', [AnnouncementController::class, 'newAnnouncement'])->name('new-announcement');
+    Route::get('add-announcement', [AnnouncementController::class, 'newAnnouncement'])->name('add-announcement');
+    Route::get('edit-announcement/{id}', [AnnouncementController::class, 'editAnnouncement'])->name('edit-announcement');
     Route::post('create-announcement', [AnnouncementController::class, 'store'])->name('create-announcement');
+    Route::post('update-announcement/{id}', [AnnouncementController::class, 'updateAnnouncement'])->name('update-announcement');
     Route::get('get-all-announcement', [AnnouncementController::class, 'showAllAnnouncement'])->name('get-all-announcement');
     Route::delete('delete-announcement/{id}', [AnnouncementController::class, 'destroy']);
     Route::get('show-announcement/{id}', [AnnouncementController::class, 'showAnnouncementById']);
