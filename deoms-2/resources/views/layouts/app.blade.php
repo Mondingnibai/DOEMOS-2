@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="d-flex align-items-center">
                 <div class="site-logo">
-                    <a href="index.html" class="d-block">
+                    <a href="{{ url('/') }}" class="d-block">
                     <img src="images/deoms_web_logo_top.png" alt="Image" class="img-fluid">
                     </a>
                 </div>
