@@ -23,28 +23,39 @@
         </div>  
         <div class="site-section">
             <div class="container">
-              <div class="row mb-5 justify-content-center text-center">
+              <div class="row mb-5 justify-content-center text-center" v-if="announcements.length > 0">
                 <div class="col-lg-4 mb-5">
                   <h2 class="section-title-underline mb-5">
                     <span>Announcements</span>
                   </h2>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-      
+              <div class="row" v-if="announcements.length > 0">
+
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 4.5em !important;" v-for="(announcement, key) in announcements" :key="announcement.id">
                   <div class="feature-1 border">
                     <div class="icon-wrapper bg-primary">
-                      <span class="flaticon-mortarboard text-white"></span>
+                      <span class="icon-bullhorn text-white"></span>
                     </div>
-                    <div class="feature-1-content">
-                      <h2>Personalize Learning</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
-                      <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
+                    <div class="feature-1-content text-left">
+                      <h2>{{ announcement.title }}</h2>
+                      <p>{{ announcement.description.substring(0, 120) + '...' }}</p>
                     </div>
                   </div>
                 </div>
-            
+
+              </div>
+
+              <div class="row" v-else>
+
+                <div class="row mb-5 justify-content-center text-center">
+                  <div class="col-lg-4 mb-5">
+                    <h2 class="section-title-underline mb-5">
+                      <span>No Announcement</span>
+                    </h2>
+                  </div>
+                </div>
+
               </div>
             </div>
         </div>
@@ -68,5 +79,31 @@
     </div>
 </template>
 <script>
-    export default {}
+    export default {
+      name:"homepageAnnouncement",
+      data() {
+        return {
+            announcements: []
+        }
+      },
+
+      mounted() {
+        // display all announcement
+        this.getAnnouncement()
+      },
+      
+      methods: {
+        // get all announcement
+        async getAnnouncement() {
+            await this.axios.get('getAllAnnouncement').then(response => {
+                
+                this.announcements = response.data
+                console.log(this.announcements)
+
+            }).catch( error => {
+                console.log(error.response)
+            })
+        }
+      }
+    }
 </script>
