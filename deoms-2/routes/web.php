@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AnnouncementController;
+use App\Http\Controllers\Admin\ResouceController;
 use App\Http\Controllers\HomeAnnouncementController;
 
 /*
