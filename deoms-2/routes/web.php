@@ -9,7 +9,7 @@ use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AnnouncementController;
-use App\Http\Controllers\Admin\ResouceController;
+use App\Http\Controllers\HomeAnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +25,10 @@ use App\Http\Controllers\Admin\ResouceController;
 
 // Public pages
 Route::get('/', [MainController::class, 'index'])->name('home');
-Route::get('/programs', [ProgramController::class, 'index'])->name('programs');
-Route::get('/our-school', [OurSchoolController::class, 'index'])->name('our-school');
-Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us');
+Route::get('programs', [ProgramController::class, 'index'])->name('programs');
+Route::get('our-school', [OurSchoolController::class, 'index'])->name('our-school');
+Route::get('contact-us', [ContactController::class, 'index'])->name('contact-us');
+Route::get('getAllAnnouncement', [HomeAnnouncementController::class, 'getAllAnnouncement'])->name('getAllAnnouncement');
 
 // Login Routes
 Auth::routes();

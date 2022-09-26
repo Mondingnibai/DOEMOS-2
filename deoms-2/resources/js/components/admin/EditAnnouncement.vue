@@ -10,7 +10,7 @@
                         <div class="col-md-12">
                             <div class="alert alert-success alert-dismissible">
                                 <!-- <button type="button"  class="close" data-dismiss="alert" aria-hidden="true">×</button> -->
-                                <h5><i class="icon fas fa-check"></i>{{ message }}</h5>
+                                <h5><i class="icon fas fa-check"></i>Announcement Successfully Updated!</h5>
                               </div>
                         </div>
                     </div>
@@ -167,6 +167,8 @@
                         this.savingSuccessful = true;
                         this.message = response.data.message;
                         this.successMessage();
+
+                        console.log(response.data);
                     })
                     .catch( error => {
                         console.log(error.response);

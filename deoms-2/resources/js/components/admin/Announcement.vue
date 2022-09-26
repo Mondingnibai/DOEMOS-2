@@ -19,7 +19,7 @@
                             <tr v-for="(announcement, key) in announcements" :key="key">
                                 <td>#</td>
                                 <td>{{ announcement.title }}</td>
-                                <td>{{ announcement.description }}</td>
+                                <td>{{ announcement.description.substring(0,100) + '...' }}</td>
                                 <!-- <td>{{ announcement.date }}:{{ announcement.time }}</td> -->
     
                                 <td style="cursor:pointer" class="project-actions text-right">
@@ -54,8 +54,7 @@
             name:"announcements",
             data() {
                 return {
-                    announcements:[],
-                    newAnnRoute: 'new-announcement'
+                    announcements:[]
                 }
             }, 
     
@@ -70,8 +69,7 @@
                     await this.axios.get('get-all-announcement').then(response => {
                         this.announcements = response.data
                     }).catch( error => {
-                        console.log(error)
-                        this.announcements = []
+                        console.log(error.response)
                     })
                 },
     
