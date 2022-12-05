@@ -1,7 +1,7 @@
 <template>
     <div class="app-view">
         <div class="hero-slide owl-carousel site-blocks-cover">
-            <div class="intro-section" style="background-image: url('images/deoms_teachers.jpg');">
+            <div class="intro-section" style="background-image: url('images/school.jpg');">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <div class="intro-section" style="background-image: url('images/deoms_teachers2.jpg');">
+            <div class="intro-section" style="background-image: url('images/deoms_teachers.jpg');">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
@@ -57,9 +57,21 @@
                 </div>
 
               </div>
+
             </div>
         </div>
-    
+
+          <div class="row">
+            <div class="row mb-5 justify-content-center text-center">
+              <div class="col-lg-4 mb-5">
+                <h2 class="section-title-underline mb-5">
+                  <span>Upcoming Events</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+
         <div class="section-bg style-1" style="background-image: url('images/deoms_teachers.jpg');">
             <div class="container">
               <div class="row">
@@ -69,8 +81,9 @@
                   </h2>
                 </div>
                 <div class="col-lg-8">
-                  <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nesciunt quaerat ad reiciendis perferendis voluptate fugiat sunt fuga error totam.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda omnis tempora ullam alias amet eveniet voluptas, incidunt quasi aut officiis porro ad, expedita saepe necessitatibus rem debitis architecto dolore? Nam omnis sapiente placeat blanditiis voluptas dignissimos, itaque fugit a laudantium adipisci dolorem enim ipsum cum molestias? Quod quae molestias modi fugiat quisquam. Eligendi recusandae officiis debitis quas beatae aliquam?</p>
+                  <p class="lead">The school through the collaborative efforts of the faculty with the consultant support of the Don Emilio Osmena Memorial High School students excelled in "Academic Performance" the truth is that the school has COCOFED and DOST scholars.</p>
+                  <p>Previous awardees in Declamation, Science and General Information contests. 
+                    Meeting the challenges in the competitive world. The school produced professionals worthy for emulations Teachers, Engineers, Doctors, Nurses and Priest successfully marched with heads up, proud of their Alma Matter. </p>
                 </div>
               </div>
             </div>

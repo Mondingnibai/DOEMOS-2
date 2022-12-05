@@ -11,14 +11,10 @@
                             <span>History of Don Emilio Osmena Memorial School</span>
                         </h2>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a 
-                            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-                        </p>
-
-                        <p>
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            Lately in year 1967, a man stood in the midst of pressures and hectic schedules of being a businessman. 
+                            His heart craved for an intense desire to help the poor. He sought ideas and advises from families and 
+                            friends at Colegio del San Jose in Misamis Oriental. Thus in 1968, a proposal to open a private 
+                            institution was passed, God was with him that it was approved. 
                         </p>
                     </div>
                 </div>

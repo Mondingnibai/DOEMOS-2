@@ -19,4 +19,13 @@ class OurSchoolController extends Controller
     public function index() {
         return view('public.our_school');
     }
+
+
+    public function ourTeacher() {
+        return view('public.our_teacher');
+    }
+
+    public function history() {
+        return view('public.history');
+    }
 }

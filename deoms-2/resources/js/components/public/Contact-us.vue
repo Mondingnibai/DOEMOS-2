@@ -45,35 +45,12 @@
                                 <div class="row">
                                     <div class="feature-1 border">
                                         <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-6">
+                                            <div class="row" v-for="person in contactPerson">
+                                                <div class="col-sm-12">
                                                     <div class="feature-1-content text-left">
-                                                        <h2>Principal Office</h2>
-                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
-                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="feature-1-content text-left">
-                                                        <h2>Accounting Office</h2>
-                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
-                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="feature-1-content text-left">
-                                                        <h2>Principal Office</h2>
-                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
-                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="feature-1-content text-left">
-                                                        <h2>Principal Office</h2>
-                                                        <p><span class="icon-envelope mr-2"></span> deoms@gmail.com</p>  
-                                                        <p><span class="icon-phone2 mr-2"></span> 10 20 123 456</p>  
+                                                        <h2>{{ person.office }} Office</h2>
+                                                        <p><span class="icon-user mr-2"></span> {{ person.name }}</p>  
+                                                        <p><span class="icon-phone2 mr-2"></span> {{ person.contact_no }}</p>  
                                                     </div>
                                                 </div>
                                             </div>
@@ -88,3 +65,17 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            contactPerson: [
+                { name: 'LILIOSA S. PABILLON', contact_no: '09271616724', office: 'Prinicipal'},
+                { name: 'GEZELLE C. VILLAMOR', contact_no: '09516423024', office: 'Accounting'},
+                { name: 'MARY GRACE Q. RIVERA', contact_no: '09971955937', office: 'HR'},
+            ]
+        }
+    }
+}
+</script>

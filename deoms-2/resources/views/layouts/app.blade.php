@@ -98,7 +98,7 @@
                         <li class="{{ Request::is('our-school') ? 'active' : '' }} has-children">
                             <a href="#" class="nav-link text-left">About Us</a>
                             <ul class="dropdown">
-                                <!-- <li><a href="teachers.html">Our Teachers</a></li> -->
+                                <li><a href="{{ route('our-teacher') }}">Our Teachers</a></li>
                                 <li><a href="{{ route('our-school') }}">Our School</a></li>
                             </ul>
                         </li>
@@ -116,9 +116,9 @@
                 </div>
                 <div class="ml-auto">
                     <div class="social-wrap">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                    <a href="#"><span class="icon-twitter"></span></a>
-                    <a href="#"><span class="icon-linkedin"></span></a>
+                    <a href="https://www.facebook.com/profile.php?id=100057308055681"><span class="icon-facebook"></span></a>
+                    <!-- <a href="#"><span class="icon-twitter"></span></a>
+                    <a href="#"><span class="icon-linkedin"></span></a> -->
 
                     <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
                         class="icon-menu h3"></span></a>
@@ -130,7 +130,7 @@
 
         </header>
 
-        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') || Request::is('login') )
+        @if( Request::is('our-school') ||  Request::is('programs') ||  Request::is('contact-us') || Request::is('login') ||  Request::is('our-teacher') || Request::is('history'))
         <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url(' {{ asset('images/deoms_logo.jpg') }}' )">
             <div class="container">
                 <div class="row align-items-end">
@@ -212,9 +212,9 @@ and future global competence.</p></li>
                 <div class="col-lg-4">
                     <h3 class="footer-heading"><span>Follow Us</span></h3>
                     <div class="social-wrap">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                    <a href="#"><span class="icon-twitter"></span></a>
-                    <a href="#"><span class="icon-linkedin"></span></a>
+                    <a href="https://www.facebook.com/profile.php?id=100057308055681"><span class="icon-facebook"></span></a>
+                    <!-- <a href="#"><span class="icon-twitter"></span></a>
+                    <a href="#"><span class="icon-linkedin"></span></a> -->
                     </div>
                 </div>
                 </div>

@@ -28,6 +28,8 @@ use App\Http\Controllers\HomeAnnouncementController;
 Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('programs', [ProgramController::class, 'index'])->name('programs');
 Route::get('our-school', [OurSchoolController::class, 'index'])->name('our-school');
+Route::get('our-teacher', [OurSchoolController::class, 'ourTeacher'])->name('our-teacher');
+Route::get('history', [OurSchoolController::class, 'history'])->name('history');
 Route::get('contact-us', [ContactController::class, 'index'])->name('contact-us');
 Route::get('getAllAnnouncement', [HomeAnnouncementController::class, 'getAllAnnouncement'])->name('getAllAnnouncement');
 

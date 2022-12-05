@@ -41,7 +41,17 @@
                                 <li>Grade 10</li>  
                             </ol>
                         </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 mr-auto align-self-center order-2 order-lg-1">
+                        <h2 class="section-title-underline mb-5">
+                            <span>Senior High School Department</span>
+                        </h2>
+                        <ol class="ul-check primary list-unstyled">
+                            <li>General Academic Strands (GAS)</li>
+                        </ol>
                     </div>
+                </div>
             </div>
         </div>
     </div>
